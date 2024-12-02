@@ -1,0 +1,30 @@
+Project : Threads-application-Backend
+
+Tech Stacks:
+- nodejs
+- expressJS
+- typescript -> typescript configuration bhi chahiye  "npx tsc --init", "- npm i tsc-watch -D"
+- grapghQl -> apollo server -> "npm i @apollo/server", https://www.apollographql.com/docs/apollo-server/api/express-middleware , "npm i grapghql"
+- prisma
+
+database me 
+- postgres
+
+pura developent setup karne ke liye Docker
+- Dockur.
+- docker-composer-file.
+
+   TS
+- ts direct production me nhi calti wo complie hoti hai pahale js me or js chalti hai production me to pahle complite karna   hoga server run karne se pahale 
+
+- npm i tsc-watch -D 
+- json file me hum complile karne ke liye scrit banayenge 
+   "scripts": {
+    "start": "ts-node index.ts",
+     "dev": "ts-watch"
+   },
+- Run server:
+- "npm run dev" : es command se comlied JS file a jayegi then "start" script run karenge 
+
+--How to run "docker.composer.yml" file 
+- run this file using command "docker compose up" 
