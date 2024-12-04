@@ -1,0 +1,6 @@
+user ka type,
+user ks schema,
+user ka mutations,
+user ks query,
+
+sab kuch es files or folder me hoga 

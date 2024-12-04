@@ -1,13 +1,28 @@
-import { ApolloServer } from "@apollo/server";
-// import { typeDefs } from "./schema";
-// import { resolvers } from "./resolvers";
+import { ApolloServer } from "@apollo/server"; 
+import { User } from "./user";
 
-const gqlserver = new ApolloServer({
+async function createGraphqlServer() {
+  const gqlServer = new ApolloServer({
+    // GraphQL schema definition
     typeDefs: `
-      type Query{
-         hello:string      
-      } 
-      type mutations: {
-      }      
-    `
-})
+      ${User.typeDefs}     
+      type Mutation {
+        ${User.mutations}   
+      }
+    `,
+    resolvers: {
+      Query: {
+        ...User.resolvers.queries, // Queries resolvers
+      },
+      Mutation: {
+        ...User.resolvers.mutations, // Mutations resolvers
+      },
+    },
+  });
+
+  // Start the GraphQL server
+  await gqlServer.start();
+  return gqlServer;
+}
+
+export default createGraphqlServer;
