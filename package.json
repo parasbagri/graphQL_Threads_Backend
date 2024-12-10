@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",
+     "build": "tsc",
     "dev": "tsc-watch --onSuccess \"npm start\""
+   
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,6 @@
     "express": "^4.21.1",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2",
-     "tsc-watch": "^1.1.39"
+    "tsc-watch": "^1.1.39"
   }
 }
