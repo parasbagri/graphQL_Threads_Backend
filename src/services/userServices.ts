@@ -1,6 +1,6 @@
 // service layer ka kya kaam hota hai.
 
-import { prismaClient } from "../lib/DB"
+import { prismaClient } from "../lib/db"
 import {createHmac, randomBytes} from "node:crypto"
 import JWT  from "jsonwebtoken"
 
