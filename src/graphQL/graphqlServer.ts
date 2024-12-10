@@ -5,7 +5,7 @@ async function createGraphqlServer() {
   const gqlServer = new ApolloServer({
     // GraphQL schema definition
     typeDefs: `
-      ${User.typeDefs}     
+        ${User.typeDefs}     
       type Mutation {
         ${User.mutations}   
       }

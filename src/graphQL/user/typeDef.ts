@@ -3,6 +3,6 @@
 
 export const typeDefs = `
      type Query {
-      hello: String
+       getUserToken(email:String!, password:String!):String
       }
 `

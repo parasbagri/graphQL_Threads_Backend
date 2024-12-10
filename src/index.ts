@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 // start the gql srver
 const gqlServer = await createGrapgqlServer()
-// port dena hai ki grapgQl run ho us port se /graphql per
+// graphQL Port
 app.use("/graphql", expressMiddleware(gqlServer))
 
 app.listen(PORT, () => console.log(`Server started at PORT:${PORT}`));
